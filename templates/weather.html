@@ -1,0 +1,117 @@
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="foto-weather">
+
+<h1><span>Погода</span></h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2 class="h2-weat">Погода на ближайшие 3 часа</h2>
+            <div class="row">
+            <div class="col-lg-6">
+                <ul class="list-group">
+                {% for i in weat3 %}
+                    <li class="list-group-item">
+                        {{ i }}
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-lg-6">
+                <ul class="list-group">
+                {% for i in weat3temp %}
+                    <li class="list-group-item">
+                        {{ i }}&deg;C
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+            <div class="row form-group form-inline weat" id="rowDiv">
+                <input type="text" name="city" id="city" class="form-control" placeholder="City name">
+                <button id="submitWeather" class="btn btn-primary">Search City</button>
+             </div>
+
+            <div class="show" id="show"></div>
+
+        </div>
+
+        <div class="col-lg-6">
+            <h2 class="h2-weat">Погода на сутки</h2>
+            <div class="row">
+            <div class="col-lg-6">
+                <ul class="list-group lisgr">
+                {% for i in weatday %}
+                    <li class="list-group-item">
+                        {{ i }}
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-lg-6">
+                <ul class="list-group">
+                {% for i in weattemp %}
+                    <li class="list-group-item">
+                        {{ i }}&deg;C
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type=text/javascript></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+<script type=text/javascript>
+
+$(document).ready(function () {
+
+    $('#submitWeather').click(function () {
+
+        var city = $('#city').val();
+
+        if(city != ''){
+
+            $.ajax({
+
+                url:'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric' +
+                    '&APPID=bf92102ecd82d3994af53c403681fbd1',
+
+                type: 'GET',
+                dataType: 'jsonp',
+                success: function(data){
+                    let out='';
+                        out +='<p><img src="https://openweathermap.org/img/w/' + data.weather[0].icon + '.png"></p>';
+                        out +='<p class="p-temp">Температура: <b class="b-temp">' + Math.round(data.main.temp)+'&#176;C</b></p>';
+                        out +='<p class="p-temp">Влажность: <b class="b-temp">' + data.main.humidity + '%</b></p>';
+                        out +='<p class="p-temp">Давление: <b class="b-temp">'+ Math.round(data.main.pressure*0.00750063755419211*100)+'мм.рт.ст</b></p>';
+                        out +='<p class="p-temp">Видимость: <b class="b-temp">' + (data.visibility/1000)+'км</b></p>';
+                        console.log(data.main);
+                        $('#show').html(out);
+                }
+
+                });
+            }else{
+                $('#error').html('Fiend cannot be empty');
+            }
+
+                });
+
+});
+</script>
+
+{% endblock content %}
