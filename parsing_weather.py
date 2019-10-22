@@ -10,7 +10,7 @@ appid = "bf92102ecd82d3994af53c403681fbd1"
 
 def Weather_3_hours():
     try:
-        res = requests.get("http://api.openweathermap.org/data/2.5/forecast/",
+        res = requests.get("https://api.openweathermap.org/data/2.5/forecast/",
                            params={'id': city_id, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
         data = res.json()
         result = []
@@ -25,7 +25,7 @@ def Weather_3_hours():
 
 def Weather_3_temp():
     try:
-        res = requests.get("http://api.openweathermap.org/data/2.5/forecast/",
+        res = requests.get("https://api.openweathermap.org/data/2.5/forecast/",
                            params={'id': city_id, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
         data = res.json()
         result = []
@@ -40,7 +40,7 @@ def Weather_3_temp():
 
 def Weather_day():
     try:
-        res = requests.get("http://api.openweathermap.org/data/2.5/forecast/",
+        res = requests.get("https://api.openweathermap.org/data/2.5/forecast/",
                            params={'id': city_id, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
         data = res.json()
         result1 = []
@@ -55,7 +55,7 @@ def Weather_day():
 
 def Weather_temp():
     try:
-        res = requests.get("http://api.openweathermap.org/data/2.5/forecast/",
+        res = requests.get("https://api.openweathermap.org/data/2.5/forecast/",
                            params={'id': city_id, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
         data = res.json()
         result2 = []
