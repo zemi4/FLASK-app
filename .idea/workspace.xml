@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fdbf4624-5e50-435b-bd46-773e3215efc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing_currency.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsing_currency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing_weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsing_weather.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/currency.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/currency.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weather.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +84,7 @@
       <updated>1571684291850</updated>
       <workItem from="1571684293214" duration="3531000" />
       <workItem from="1571689197902" duration="601000" />
-      <workItem from="1571763438228" duration="2803000" />
+      <workItem from="1571763438228" duration="3898000" />
     </task>
     <servers />
   </component>
