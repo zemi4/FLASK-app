@@ -3,14 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="fdbf4624-5e50-435b-bd46-773e3215efc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/currency.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/currency.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weather.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -84,7 +89,10 @@
       <updated>1571684291850</updated>
       <workItem from="1571684293214" duration="3531000" />
       <workItem from="1571689197902" duration="601000" />
-      <workItem from="1571763438228" duration="3898000" />
+      <workItem from="1571763438228" duration="4101000" />
+      <workItem from="1573143815825" duration="672000" />
+      <workItem from="1573146205001" duration="59000" />
+      <workItem from="1575919583499" duration="2936000" />
     </task>
     <servers />
   </component>
@@ -106,6 +114,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/flask_project$Flask__APP_py_.coverage" NAME="Flask (APP.py) Coverage Results" MODIFIED="1571685092610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/flask_project$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1571766238958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_project$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1575927420396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
