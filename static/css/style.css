@@ -90,15 +90,32 @@ h1::before,h1::after{
 	display: inline-block;
 }
 
-.table{
+.currency-box{
+	display: flex;
+	justify-content: space-between;
+}
+
+.box-left{
+	width: 100%;
+}
+
+.box-right{
+	width: 100%;
+	text-align: right;
+}
+
+.line{
 	position: relative;
-	color: #dfdfdf
+	color: #dfdfdf;
+	font-size: 18px;
+	padding-bottom: 5px;
 }
 
 .but-cur{
 	position: relative;
 	text-align: center;
 	display: block;
+	margin: 3%;
 }
 
 .sho{

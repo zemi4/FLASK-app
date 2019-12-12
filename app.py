@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-# from parsing_currency import *
+from parsing_currency import *
 from parsing_afisha2 import *
 from parsing_weather import *
 
@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/')
 def courses():
 
-    return render_template('currency.html')
+    return render_template('currency.html', NameCur=name_cur(), Cur=cur())
 
 
 @app.route('/movies/')

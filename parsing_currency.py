@@ -1,92 +1,22 @@
 import requests
 
+url = 'http://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
+response = requests.get(url).json()
 
-def get_money_euro():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "EUR"
+
+def name_cur():
+    result = []
     for i in response:
-        if key in i['Cur_Abbreviation']:
-            # result.append(i['Cur_OfficialRate'])
-            return i['Cur_OfficialRate']
+        x = i['Cur_Name']
+        result.append(x)
+    return result
 
 
-def get_money_usd():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "USD"
+def cur():
+    result = []
     for i in response:
-        if key in i['Cur_Abbreviation']:
-            return i['Cur_OfficialRate']
+        x = i['Cur_OfficialRate']
+        result.append(x)
+    return result
 
-
-def get_money_rus():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "RUB"
-    for i in response:
-        if key in i['Cur_Abbreviation']:
-            return '{}'.format(i['Cur_OfficialRate'])
-
-
-def get_money_aud():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "AUD"
-    for i in response:
-        if key in i['Cur_Abbreviation']:
-            return '{}'.format(i['Cur_OfficialRate'])
-
-
-def get_money_bgn():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "BGN"
-    for i in response:
-        if key in i['Cur_Abbreviation']:
-            return '{}'.format(i['Cur_OfficialRate'])
-
-
-def get_money_uah():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "UAH"
-    for i in response:
-        if key in i['Cur_Abbreviation']:
-            return '{}'.format(i['Cur_OfficialRate'])
-
-
-def get_money_dkk():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "DKK"
-    for i in response:
-        if key in i['Cur_Abbreviation']:
-            return '{}'.format(i['Cur_OfficialRate'])
-
-
-def get_money_pln():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "PLN"
-    for i in response:
-        if key in i['Cur_Abbreviation']:
-            return '{}'.format(i['Cur_OfficialRate'])
-
-
-def get_money_irr():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "IRR"
-    for i in response:
-        if key in i['Cur_Abbreviation']:
-            return '{}'.format(i['Cur_OfficialRate'])
-
-
-def get_money_isk():
-    url = 'https://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
-    response = requests.get(url).json()
-    key = "ISK"
-    for i in response:
-        if key in i['Cur_Abbreviation']:
-            return '{}'.format(i['Cur_OfficialRate'])
+# print(cur())
