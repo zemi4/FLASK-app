@@ -1,22 +1,23 @@
-import requests
+import requests, time
 
+# data = input()
+# url_data = 'http://www.nbrb.by/API/ExRates/Rates?onDate=' + data + '&Periodicity=0'
 url = 'http://www.nbrb.by/API/ExRates/Rates?Periodicity=0'
 response = requests.get(url).json()
+time.sleep(0.01)
 
 
-def name_cur():
-    result = []
+def currency():
+    name = []
+    rate = []
     for i in response:
         x = i['Cur_Name']
-        result.append(x)
-    return result
+        name.append(x)
 
-
-def cur():
-    result = []
     for i in response:
         x = i['Cur_OfficialRate']
-        result.append(x)
-    return result
+        rate.append(x)
+    return name, rate
 
-# print(cur())
+
+name, rate = currency()

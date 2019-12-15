@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/')
 def courses():
 
-    return render_template('currency.html', NameCur=name_cur(), Cur=cur())
+    return render_template('currency.html', NameCur=name, Cur=rate)
 
 
 @app.route('/movies/')
