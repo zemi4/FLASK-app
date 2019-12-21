@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div class="foto-currency">
+    <div class="photo-currency">
         <div>
             <h1><span>Курсы валют</span></h1>
             <div class="container">
@@ -15,8 +15,8 @@
                         {% endfor %}
                     </div>
                     <div class="box-right">
-                        {% for i in Cur %}
-                            <div class="line">{{ i }}</div>
+                        {% for cur in Cur %}
+                            <div class="line">{{ cur }}</div>
                         {% endfor %}
                     </div>
                 </div>
@@ -49,13 +49,13 @@
 
                     url:
 
-                     "http://www.nbrb.by/API/ExRates/Rates?onDate=" + cur + "&Periodicity=0",
+                     "https://www.nbrb.by/API/ExRates/Rates?onDate=" + cur + "&Periodicity=0",
 
                     type: 'GET',
                     dataType: 'json',
                     success: function(data){
                         let out='';
-                        out +='<b>' + data[0]['Cur_Name'] + '</b><b>' + ' - ' + data[0]['Cur_OfficialRate'] + '</b><br>';
+                        out +='<div class="jq">' + '<b>' + data[0]['Cur_Name'] + '</b><b>' + ' - ' + data[0]['Cur_OfficialRate'] + '</b><br>';
                         out +='<b>' + data[1]['Cur_Name'] + '</b><b>' + ' - ' + data[1]['Cur_OfficialRate'] + '</b><br>';
                         out +='<b>' + data[2]['Cur_Name'] + '</b><b>' + ' - ' + data[2]['Cur_OfficialRate'] + '</b><br>';
                         out +='<b>' + data[3]['Cur_Name'] + '</b><b>' + ' - ' + data[3]['Cur_OfficialRate'] + '</b><br>';
@@ -80,7 +80,7 @@
                         out +='<b>' + data[22]['Cur_Name'] + '</b><b>' + ' - ' + data[22]['Cur_OfficialRate'] + '</b><br>';
                         out +='<b>' + data[23]['Cur_Name'] + '</b><b>' + ' - ' + data[23]['Cur_OfficialRate'] + '</b><br>';
                         out +='<b>' + data[24]['Cur_Name'] + '</b><b>' + ' - ' + data[24]['Cur_OfficialRate'] + '</b><br>';
-                        out +='<b>' + data[25]['Cur_Name'] + '</b><b>' + ' - ' + data[25]['Cur_OfficialRate'] + '</b><br>';
+                        out +='<b>' + data[25]['Cur_Name'] + '</b><b>' + ' - ' + data[25]['Cur_OfficialRate'] + '</b><br>' + '</div>';
 
 
                             console.log(data);

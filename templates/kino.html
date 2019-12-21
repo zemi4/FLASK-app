@@ -1,24 +1,22 @@
 {% extends 'index.html' %}
 
 {% block content %}
-    <div class="foto-kino">
-      <h1><span>Новинки кино</span></h1>
-      <div class="films container">
-        <div class="row">
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link0 }}"><img class="img-kino" src="{{ afis_img0 }}" alt="{{ afis_text0 }}"> <br><b class="link-kino"> {{ afis_text0 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link1 }}"><img class="img-kino" src="{{ afis_img1 }}" alt="{{ afis_text1 }}"> <br><b class="link-kino"> {{ afis_text1 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link2 }}"><img class="img-kino" src="{{ afis_img2 }}" alt="{{ afis_text2 }}"> <br><b class="link-kino"> {{ afis_text2 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link3 }}"><img class="img-kino" src="{{ afis_img3 }}" alt="{{ afis_text3 }}"> <br><b class="link-kino"> {{ afis_text3 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link4 }}"><img class="img-kino" src="{{ afis_img4 }}" alt="{{ afis_text4 }}"> <br><b class="link-kino"> {{ afis_text4 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link5 }}"><img class="img-kino" src="{{ afis_img5 }}" alt="{{ afis_text5 }}"> <br><b class="link-kino"> {{ afis_text5 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link6 }}"><img class="img-kino" src="{{ afis_img6 }}" alt="{{ afis_text6 }}"> <br><b class="link-kino"> {{ afis_text6 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link7 }}"><img class="img-kino" src="{{ afis_img7 }}" alt="{{ afis_text7 }}"> <br><b class="link-kino"> {{ afis_text7 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link8 }}"><img class="img-kino" src="{{ afis_img8 }}" alt="{{ afis_text8 }}"> <br><b class="link-kino"> {{ afis_text8 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link9 }}"><img class="img-kino" src="{{ afis_img9 }}" alt="{{ afis_text9 }}"> <br><b class="link-kino"> {{ afis_text9 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link10 }}"><img class="img-kino" src="{{ afis_img10 }}" alt="{{ afis_text10 }}"> <br><b class="link-kino"> {{ afis_text10 }}</b> </a></div>
-          <div class="col-lg-3 kino"><a class="a-kino" href="{{ afis_link11 }}"><img class="img-kino" src="{{ afis_img11 }}" alt="{{ afis_text11 }}"> <br><b class="link-kino"> {{ afis_text11 }}</b> </a></div>
+    <div class="photo-movie">
+        <h1><span>Новинки кино</span></h1>
+        <div class="films container">
+            <div class="row">
+
+                {% for i in afis %}
+
+                    <div class="box-movie"><a class="movie" href="{{ i.find('a', class_='media').get('href') }}">
+                        <img class="img-movie" src="{{ i.find('a', class_='media').find('img').get('src') }}"><br>
+                        <b class="link-movie"> {{ i.find('a', class_='name').text }}</b></a>
+                    </div>
+
+                {% endfor %}
+
+            </div>
         </div>
-      </div>
     </div>
 {% endblock content %}
 

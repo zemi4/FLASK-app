@@ -1,132 +1,171 @@
-body{
-	font-family: Georgia, 'Times New Roman', Times, serif
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-.foto-kino{
-	background-image: url("5-filmy-marvel.jpg");
-	position: relative;
-	padding-bottom: 3%;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+.photo-movie {
+    background-image: url("5-filmy-marvel.jpg");
+    position: relative;
+    background-attachment: fixed;
+    padding-bottom: 3%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.foto-kino::before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #111;
-	opacity: 0.9;
-}
-
-
-.foto-currency{
-	background-image: url("maney.png");
-	position: relative;
-	padding-bottom: 3%;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.foto-currency::before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #111;
-	opacity: 0.9;
+.photo-movie::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    opacity: 0.9;
 }
 
 
-.foto-weather{
-	background-image: url("weather.jpg");
-	position: relative;
-	padding-bottom: 3%;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+.photo-currency {
+    background-image: url("maney.png");
+    position: relative;
+    padding-bottom: 3%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.foto-weather::before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #111;
-	opacity: 0.9;
+.photo-currency::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    opacity: 0.9;
 }
 
 
-h1{
-	color: #800000;
-	position: relative;
-	display: flex;
-	align-items: center;
-	white-space: nowrap;
-	margin: 0;
-	padding-top: 3%;
-	padding-bottom: 3%;
+.photo-weather {
+    background-image: url("weather.jpg");
+    position: relative;
+    background-attachment: fixed;
+    padding-bottom: 3%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.photo-weather::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    opacity: 0.9;
+}
+
+.box-movie {
+    display: flex;
+    text-align: center;
+    position: relative;
 
 }
 
-span{
-	margin: 0 20px;
+.row {
+    display: flex;
+    justify-content: space-between;
 }
 
-h1::before,h1::after{
-	content: '';
-	position: relative;
-	width: 100%;
-	height: 1px;
-	background-color: #800000;
-	display: inline-block;
+.link-movie {
+    display: inline-block;
+    color: #fdfdfe;
+    margin-bottom: 1%;
+    max-width: 250px;
 }
 
-.currency-box{
-	display: flex;
-	justify-content: space-between;
+.link-movie:hover {
+    color: #800000;
+    transition: all .5s ease
 }
 
-.box-left{
-	width: 100%;
+.movie {
+    outline: none;
 }
 
-.box-right{
-	width: 100%;
-	text-align: right;
+.movie:hover {
+    text-decoration: none;
 }
 
-.line{
-	position: relative;
-	color: #dfdfdf;
-	font-size: 18px;
-	padding-bottom: 5px;
+.img-movie {
+    padding-top: 15%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.but-cur{
-	position: relative;
-	text-align: center;
-	display: block;
-	margin: 3%;
+h1 {
+    color: #800000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin: 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
 }
 
-.sho{
-	position: relative;
-	color: #fdfdfe;
+span {
+    margin: 0 20px;
 }
 
-.weat{
-	text-align: center;
-	display: block;
-	padding-top: 100px;
+h1::before, h1::after {
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #800000;
+    display: inline-block;
+}
+
+.currency-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-left {
+    width: 100%;
+}
+
+.box-right {
+    width: 100%;
+    text-align: right;
+}
+
+.line {
+    position: relative;
+    color: #dfdfdf;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.but-cur {
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: 3%;
+}
+
+.sho {
+    position: relative;
+    color: #fdfdfe;
+}
+
+.weat {
+    text-align: center;
+    display: block;
+    padding-top: 100px;
 }
 
 /*footer*/
@@ -135,15 +174,18 @@ h1::before,h1::after{
     border-top: 1px solid #666;
     background: #1e1e1e;
 }
+
 .copyright-text p {
     color: #ccc;
     margin-top: 9px;
     margin-bottom: 0;
 }
+
 .social-link li {
     display: inline-block;
     margin: 0 5px;
 }
+
 .social-link li a {
     color: #ccc;
     border: 1px solid #ccc;
@@ -157,44 +199,36 @@ h1::before,h1::after{
     transition: .5s;
 }
 
-.lisgr{
-	padding-bottom: 30px;
+.lisgr {
+    padding-bottom: 30px;
 }
+
 /*end footer*/
 
 
-.h2-weat{
-	color: #fdfdfe;
-	text-align: center;
-	padding-bottom: 15px;
+.h2-weat {
+    color: #fdfdfe;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
-.kino{
-	text-align: center;
+
+.b-temp, .p-temp {
+    color: #fdfdfe !important;
 }
 
-.link-kino{
-	color: #800000;
-	margin-bottom: 15px;
+.show {
+    color: #fdfdfe;
 }
 
-.link-kino:hover{
-	color: #fdfdfe;
-	transition: all .5s ease
-}
-
-.a-kino:hover{
-	text-decoration: none;
-}
-
-.img-kino{
-	padding-top: 40px;
-}
-
-.b-temp,.p-temp{
-	color: #fdfdfe !important;
-}
-
-.show{
-	color: #fdfdfe;
+.jq {
+    width: 90%;
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #1e1e1e;
+    opacity: 90%;
+    padding: 20px;
 }
