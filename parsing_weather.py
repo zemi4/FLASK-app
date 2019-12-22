@@ -1,41 +1,8 @@
 import requests
-import pyowm
-import json
-
 
 s_city = "Minsk,BY"
 city_id = 625144
 appid = "bf92102ecd82d3994af53c403681fbd1"
-
-
-def Weather_3_hours():
-    try:
-        res = requests.get("https://api.openweathermap.org/data/2.5/forecast/",
-                           params={'id': city_id, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
-        data = res.json()
-        result = []
-        for i in data['list'][:2]:
-            date = i['dt_txt'][10:16]
-            result.append(date)
-        return result
-    except Exception as e:
-        print("Exception (forecast):", e)
-        pass
-
-
-def Weather_3_temp():
-    try:
-        res = requests.get("https://api.openweathermap.org/data/2.5/forecast/",
-                           params={'id': city_id, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
-        data = res.json()
-        result = []
-        for i in data['list'][:2]:
-            date = i['main']['temp']
-            result.append(round(date))
-        return result
-    except Exception as e:
-        print("Exception (forecast):", e)
-        pass
 
 
 def Weather_day():
@@ -66,4 +33,3 @@ def Weather_temp():
     except Exception as e:
         print("Exception (forecast):", e)
         pass
-

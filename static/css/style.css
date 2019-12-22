@@ -1,8 +1,60 @@
+/*Navigation Bar*/
+
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: 'Montserrat', sans-serif;
 }
 
-.photo-movie {
+.navbar {
+    background-color: #000000;
+}
+
+.navbar .brand-navbar img:hover {
+    opacity: 0.7;
+}
+
+.navbar ul {
+    padding: 0px 30px 0px 0px;
+}
+
+.navbar ul li a {
+    color: white;
+    margin: 10px 0px 0px 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.navbar ul li a .fas {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.navbar ul li a:hover {
+    color: #15b000;
+}
+
+.navbar ul li.active > a {
+    color: #15b000;
+    font-weight: bold;
+    font-size: 12px;
+    border-left: 3px solid #15b000;
+    border-radius: 40px;
+}
+
+.iconStyle {
+    color: #15b000;
+}
+
+.navbar-toggler {
+    color: #000000;
+    background-color: #15b000;
+}
+
+.nav-link {
+    outline: none !important;
+}
+
+/*end Navigation Bar*/
+.photo-movie, .photo-currency, .photo-weather {
     background-image: url("5-filmy-marvel.jpg");
     position: relative;
     background-attachment: fixed;
@@ -12,7 +64,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.photo-movie::before {
+.photo-movie::before, .photo-currency::before, .photo-weather::before {
     content: '';
     position: absolute;
     top: 0;
@@ -26,44 +78,10 @@ body {
 
 .photo-currency {
     background-image: url("maney.png");
-    position: relative;
-    padding-bottom: 3%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
-
-.photo-currency::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #111;
-    opacity: 0.9;
-}
-
 
 .photo-weather {
     background-image: url("weather.jpg");
-    position: relative;
-    background-attachment: fixed;
-    padding-bottom: 3%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.photo-weather::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #111;
-    opacity: 0.9;
 }
 
 .box-movie {
@@ -129,25 +147,21 @@ h1::before, h1::after {
     display: inline-block;
 }
 
+/*Currency*/
 .currency-box {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    color: white;
 }
 
-.box-left {
+.currency-box-left {
     width: 100%;
 }
 
-.box-right {
+.currency-box-right {
     width: 100%;
     text-align: right;
-}
-
-.line {
-    position: relative;
-    color: #dfdfdf;
-    font-size: 18px;
-    padding-bottom: 5px;
 }
 
 .but-cur {
@@ -157,15 +171,80 @@ h1::before, h1::after {
     margin: 3%;
 }
 
-.sho {
+.short {
     position: relative;
     color: #fdfdfe;
 }
 
-.weat {
+/*Weather*/
+.weather-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.string {
+    display: flex;
+}
+
+.weather-line {
+    position: relative;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    padding: 15px;
+
+}
+
+.weather-box-left {
+    margin-right: 0;
+    margin-left: 20%;
+    width: 80%;
     text-align: center;
-    display: block;
-    padding-top: 100px;
+}
+
+.weather-box-right {
+    margin-right: 20%;
+    margin-left: 0;
+    width: 80%;
+    text-align: center;
+}
+
+.weather-box-left .weather-line {
+    border-radius: 30px 0 0 30px;
+}
+
+.weather-box-right .weather-line {
+    border-radius: 0 30px 30px 0;
+}
+
+.h2 {
+    color: #fdfdfe;
+    text-align: center;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.b-temp, .p-temp {
+    color: #fdfdfe !important;
+}
+
+.show {
+    position: relative;
+    color: #fdfdfe;
+    text-align: center;
+}
+
+.weather-input {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 10px;
+}
+
+.weather-btn {
+    margin-left: 10px;
 }
 
 /*footer*/
@@ -199,27 +278,7 @@ h1::before, h1::after {
     transition: .5s;
 }
 
-.lisgr {
-    padding-bottom: 30px;
-}
-
 /*end footer*/
-
-
-.h2-weat {
-    color: #fdfdfe;
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-
-.b-temp, .p-temp {
-    color: #fdfdfe !important;
-}
-
-.show {
-    color: #fdfdfe;
-}
 
 .jq {
     width: 90%;

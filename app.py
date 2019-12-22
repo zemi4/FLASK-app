@@ -13,13 +13,12 @@ def courses():
 
 @app.route('/movies/')
 def movies():
-    return render_template('kino.html', afis=main())
+    return render_template('movie.html', afis=main())
 
 
 @app.route('/weather/')
 def weather():
-    return render_template('weather.html', weat3=Weather_3_hours(), weatday=Weather_day(), weat3temp=Weather_3_temp(),
-                           weattemp=Weather_temp())
+    return render_template('weather.html', weatday=Weather_day(), weattemp=Weather_temp())
 
 
 if __name__ == '__main__':
